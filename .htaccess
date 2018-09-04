@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^product/([^/.]+)/?$ product.php?metatitle=$1 [L]
+RewriteRule ^productdetail/([^/.]+)/?$ productdetail.php?metatitle=$1 [L]
+RewriteRule ^aboutus/([^/.]+)/?$ aboutus.php?name=$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.php [L]
